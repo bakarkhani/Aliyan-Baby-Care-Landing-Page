@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Aliyan Baby Care"
+description = "A calm, welcoming landing page for Aliyan Baby Care in Lahore, showcasing selected products and customer information while directing shoppers to TazzBazar."
+version = "1.0.0"
+id = "artifacts/aliyan-baby-care"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24541
+
+[services.development]
+run = "pnpm --filter @workspace/aliyan-baby-care run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/aliyan-baby-care", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/aliyan-baby-care/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24541"
+BASE_PATH = "/"
