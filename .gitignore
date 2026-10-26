@@ -47,3 +47,16 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Next.js
+/aliyan-next/.next/
+/aliyan-next/out/
+/aliyan-next/node_modules/
+/aliyan-next/.vercel/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+/aliyan-next/tsconfig.tsbuildinfo
