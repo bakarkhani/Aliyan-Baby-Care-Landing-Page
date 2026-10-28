@@ -1,14 +1,16 @@
 import { ArrowRight, Star } from 'lucide-react';
 import { siteConfig } from '@/config/site';
-import { OrganicTransition } from '@/components/ui/OrganicTransition';
-import { ExternalLink } from '@/components/ui/ExternalLink';
 
 export function Hero() {
   const { business } = siteConfig;
 
   return (
-    <header className="hero" id="top" data-scroll-scene>
-      <OrganicTransition tone="alt" shape="rolling" />
+    <header className="hero" id="top">
+      <span
+        className="hero-art-description"
+        role="img"
+        aria-label="Watercolor illustration of a sleeping baby on a golden crescent moon, surrounded by clouds, flowers, foliage, and stars."
+      />
       <div className="hero-stage">
         <div className="shelf">
           <h1 data-testid="text-brand-name">{business.name}</h1>
@@ -47,34 +49,16 @@ export function Hero() {
       <div className="wrap">
         <div className="hero-content">
           <div className="hero-copy">
-            <span className="eyebrow">Your neighbourhood baby-care shop</span>
-            <p className="hero-tagline">{business.tagline}</p>
-            <p className="hero-location">Right here in Amir Town, Lahore.</p>
-            <div className="hero-actions">
-              <a className="button-primary" href="#featured">
-                Explore the shop <ArrowRight size={17} aria-hidden="true" />
-              </a>
-              <ExternalLink href={business.whatsapp} className="hero-contact-link">
-                Chat with the shop
-              </ExternalLink>
-            </div>
+            <p>Baby and mother-care essentials, here in your Lahore neighbourhood.</p>
           </div>
-          <div className="hero-artwork">
-            <div className="hero-scene" id="hero-scene" aria-hidden="true">
-              <div className="hero-scene-parallax">
-                <div className="hero-scene-art" />
-              </div>
-            </div>
-            <span className="hero-art-description" role="img"
-              aria-label="Watercolor illustration of a sleeping baby on a golden crescent moon, surrounded by clouds, flowers, foliage, and stars." />
-          </div>
+          <p className="hero-side-note">
+            Trust · Quality · Affordable Prices<span>Amir Town · Lahore</span>
+          </p>
         </div>
         <div className="hero-bottom">
-          <p className="hero-promise">Trust · Quality · Affordable Prices</p>
           <a
             className="scroll-cue"
             href="#featured"
-            data-reveal
             data-testid="link-explore-collection"
           >
             <span>Explore</span>

@@ -1,8 +1,7 @@
-import { ArrowUpRight, Clock3, Mail, MapPin, Phone } from 'lucide-react';
+import { Clock3, Mail, MapPin, Phone } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { ExternalLink } from '@/components/ui/ExternalLink';
 import { SocialMark } from '@/components/ui/SocialMark';
-import { OrganicTransition } from '@/components/ui/OrganicTransition';
 
 export function Contact() {
   const { business } = siteConfig;
@@ -11,25 +10,20 @@ export function Contact() {
     <section
       className="contact-section"
       id="contact"
-      data-scroll-scene
       tabIndex={-1}
-      aria-labelledby="contact-title"
+      aria-labelledby="contact-eyebrow"
     >
       <div className="wrap contact-panel">
-        <div className="contact-title" data-reveal>
+        <div className="contact-title">
           <span className="eyebrow" id="contact-eyebrow">
             We’re right here
           </span>
-          <h2 className="contact-location" id="contact-title">Right here in Amir Town, Lahore.</h2>
           <p>
             Questions about delivery or the right way to order? Contact the shop
             for the latest details.
           </p>
-          <ExternalLink href={business.whatsapp} className="button-primary">
-            Say hello on WhatsApp <ArrowUpRight size={16} aria-hidden="true" />
-          </ExternalLink>
         </div>
-        <div className="contact-details" data-reveal data-reveal-stagger>
+        <div className="contact-details">
           <a
             className="contact-detail"
             href={business.phoneHref}
@@ -78,7 +72,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-      <OrganicTransition tone="alt" shape="rolling" />
     </section>
   );
 }

@@ -1,10 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowUpRight, PackageCheck, Plus, ShieldCheck, Truck } from 'lucide-react';
-import { ExternalLink } from '@/components/ui/ExternalLink';
+import { PackageCheck, Plus, ShieldCheck, Truck } from 'lucide-react';
 import { siteConfig } from '@/config/site';
-import { OrganicTransition } from '@/components/ui/OrganicTransition';
 
 function PolicyIcon({ type }: { type?: string }) {
   if (type === 'truck') return <Truck aria-hidden="true" />;
@@ -21,29 +19,21 @@ export function CustomerInformation() {
     <section
       className="customer-info"
       id="information"
-      data-scroll-scene
       tabIndex={-1}
       aria-labelledby="information-title"
     >
       <div className="wrap info-layout">
-        <div className="info-aside" data-reveal>
+        <div className="info-aside">
           <span className="eyebrow">Good to know</span>
           <h2 id="information-title">
             Find your favourites and order on TazzBazar.
           </h2>
           <p>Browse our products and order online.</p>
           <div className="mini-note">
-            <Truck size={23} aria-hidden="true" />
-            <div><strong>Delivery, close to home.</strong>
-              <p>Free delivery within Amir Town&apos;s 2 km delivery radius. Additional delivery charges apply beyond this area.</p>
-            </div>
+            TazzBazar handles checkout.
           </div>
-          <ExternalLink href={siteConfig.shopUrl} className="button-outline">
-            Visit TazzBazar <ArrowUpRight size={16} aria-hidden="true" />
-          </ExternalLink>
-          <p className="checkout-note">TazzBazar handles checkout.</p>
         </div>
-        <div className="accordion" data-reveal data-reveal-stagger>
+        <div className="accordion">
           {policies.map((item) => {
             const expanded = open === item.id;
             return (
@@ -80,7 +70,6 @@ export function CustomerInformation() {
           })}
         </div>
       </div>
-      <OrganicTransition tone="mint" />
     </section>
   );
 }

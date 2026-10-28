@@ -7,9 +7,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer" data-scroll-scene>
+    <footer className="footer">
       <div className="wrap">
-        <div className="footer-main" data-reveal data-reveal-stagger>
+        <div className="footer-main">
           <div className="footer-brand">
             <h2>{business.name}</h2>
             <p>
@@ -112,7 +112,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="footer-ending" data-reveal>
+        <div className="footer-ending">
           <span
             className="footer-art-description"
             role="img"
@@ -129,7 +129,6 @@ export function Footer() {
               ↑ Back to top
             </a>
           </div>
-          <div className="footer-farewell-art" aria-hidden="true" />
         </div>
       </div>
     </footer>
