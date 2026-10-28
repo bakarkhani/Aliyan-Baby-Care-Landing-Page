@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { DM_Sans, Fraunces } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 import './globals.css';
+//import './storefront.css';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],

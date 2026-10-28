@@ -7,9 +7,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer" data-scroll-scene>
       <div className="wrap">
-        <div className="footer-main">
+        <div className="footer-main" data-reveal data-reveal-stagger>
           <div className="footer-brand">
             <h2>{business.name}</h2>
             <p>
@@ -112,22 +112,24 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="footer-ending">
-          <div
-            className="farewell-placeholder"
+        <div className="footer-ending" data-reveal>
+          <span
+            className="footer-art-description"
             role="img"
-            aria-label="Development placeholder for the waving baby on a crescent moon farewell artwork"
-            data-testid="placeholder-farewell-artwork"
-          >
-            Farewell artwork placeholder — waving baby on a crescent moon to be
-            supplied.
-          </div>
-          <p className="farewell-line">Sweet dreams, little ones.</p>
+            aria-label="Watercolor illustration of a smiling baby waving from a golden crescent moon, surrounded by clouds, flowers, foliage, and stars."
+          />
           <p className="copyright">
             © {currentYear} {business.name}
             <br />
             Lahore, Pakistan
           </p>
+          <div className="footer-signoff">
+            <p className="farewell-line">Sweet dreams, little ones.</p>
+            <a className="back-to-top" href="#top" data-testid="link-footer-back-to-top">
+              ↑ Back to top
+            </a>
+          </div>
+          <div className="footer-farewell-art" aria-hidden="true" />
         </div>
       </div>
     </footer>

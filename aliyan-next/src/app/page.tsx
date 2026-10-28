@@ -4,6 +4,8 @@ import { SocialShowcase } from '@/components/sections/SocialShowcase';
 import { CustomerInformation } from '@/components/sections/CustomerInformation';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/sections/Footer';
+import { RevealObserver } from '@/components/ui/RevealObserver';
+import { ScrollmationController } from '@/components/ui/ScrollmationController';
 
 export default function HomePage() {
   return (
@@ -15,6 +17,8 @@ export default function HomePage() {
       >
         Skip to featured categories
       </a>
+      <RevealObserver />
+      <ScrollmationController />
       <Hero />
       <main id="main-content">
         <FeaturedProducts />
